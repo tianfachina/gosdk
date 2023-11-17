@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - gosdk (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - gosdk (from `.symlinks/plugins/gosdk/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  gosdk:
+    :path: ".symlinks/plugins/gosdk/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  gosdk: baf312e3f0753c0b0f15fb93a6216c0d836d26aa
+
+PODFILE CHECKSUM: 38a78e88df2ad52dfc59cd0a8ece3baa420412af
+
+COCOAPODS: 1.11.3
