@@ -1,0 +1,8 @@
+framework module "Xhsbeian" {
+	header "ref.h"
+    header "Xhsbeian.objc.h"
+    header "Universe.objc.h"
+    header "Xhsbeian.h"
+
+    export *
+}

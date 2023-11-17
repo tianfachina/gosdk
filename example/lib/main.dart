@@ -60,9 +60,9 @@ class _MyAppState extends State<MyApp> {
           children: [
             InkWell(
               onTap: () async {
-                String resultString = await MethodChannelUtils.sendCode('19951552676');
+                String resultString = await MethodChannelUtils.sendCode('13381869879');
                 dynamic result = jsonDecode(resultString);
-                debugPrint('result------>${result['massage']}');
+                debugPrint('result------>$result');
               },
               child: Container(
                 height: 100,
@@ -75,12 +75,12 @@ class _MyAppState extends State<MyApp> {
               onTap: () async {
                 String resultString = await MethodChannelUtils.login(name: '张三',department: '北京综合支持中心',phone:'19951552676',code: '238467');
                 dynamic result = jsonDecode(resultString);
-                debugPrint('result------>${result['massage']}');
+                debugPrint('result------>$result');
               },
               child: Container(
                 height: 100,
                 width: 200,
-                color: Colors.green,
+                color: Colors.blue,
                 child: const Text('login'),
               ),
             )

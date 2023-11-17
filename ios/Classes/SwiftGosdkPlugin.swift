@@ -1,6 +1,6 @@
 import Flutter
 import UIKit
-// import Greeting
+import Xhsbeian
 
 
 public class SwiftGosdkPlugin: NSObject, FlutterPlugin {
@@ -13,10 +13,20 @@ public class SwiftGosdkPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
 
     switch call.method {
-        case "getSayHi":
-            let arguments = call.arguments as? [String: Any] ?? [String: Any]()
-            result("iOS " + UIDevice.current.systemVersion)
+//         case "getSayHi":
+//             let arguments = call.arguments as? [String: Any] ?? [String: Any]()
+//             result("iOS " + UIDevice.current.systemVersion)
 //             result(GreetingSayHi(arguments["text"] as! String))
+        case "sendCode":
+            let arguments = call.arguments as? [String: Any] ?? [String: Any]()
+            result(XhsbeianSendCode(arguments["text"] as! String))
+        case "login":
+            let arguments = call.arguments as? [String: Any] ?? [String: Any]()
+            let name = arguments["name"] as! String
+            let department = arguments["department"] as! String
+            let phone = arguments["phone"] as! String
+            let code = arguments["code"] as! String
+            result(XhsbeianLogin(name,department,phone,code))
         default:
             result("iOS " + UIDevice.current.systemVersion)
     }
