@@ -13,10 +13,6 @@ public class SwiftGosdkPlugin: NSObject, FlutterPlugin {
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
 
     switch call.method {
-//         case "getSayHi":
-//             let arguments = call.arguments as? [String: Any] ?? [String: Any]()
-//             result("iOS " + UIDevice.current.systemVersion)
-//             result(GreetingSayHi(arguments["text"] as! String))
         case "sendCode":
             let arguments = call.arguments as? [String: Any] ?? [String: Any]()
             result(XhsbeianSendCode(arguments["text"] as! String))
